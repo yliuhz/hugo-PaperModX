@@ -19,3 +19,14 @@ MathJax = {
 
 {{ if .Params.katex}}{{ partial "katex.html" . }}{{ end }}
 
+
+
+
+
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
+{{- $inlineDiscussions := resources.Get "js/inlineDisqussions.js" }}
+<script src="{{ $inlineDiscussions.RelPermalink }}"></script>
+{{- $inlineDiscussionsCSS := resources.Get "css/extended/inlineDisqussions.css" }}
+<link rel="stylesheet" type="text/css" href="{{ $inlineDiscussionsCSS.RelPermalink }}" />
+
