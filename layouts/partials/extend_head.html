@@ -3,6 +3,7 @@
 {{- /*     Can be overwritten by partial with the same name in the global layouts. */ -}}
 {{- /* Head custom content area end */ -}}
 
+<meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
 
 {{ if .Params.mathjax}}
 <script>
@@ -18,9 +19,6 @@ MathJax = {
 {{ end }}
 
 {{ if .Params.katex}}{{ partial "katex.html" . }}{{ end }}
-
-
-
 
 
 {{- $jQueryJS := resources.Get "js/jquery-3.7.0.min.js" }}

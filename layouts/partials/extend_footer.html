@@ -15,7 +15,7 @@
     // };
     (function() { // DON'T EDIT BELOW THIS LINE
     var d = document, s = d.createElement('script');
-    s.src = 'https://https-yliuhz-github-io-blogs.disqus.com/embed.js';
+    s.src = 'http://disqus.com/forums/lambdaoinks/embed.js';
     s.setAttribute('data-timestamp', +new Date());
     (d.head || d.body).appendChild(s);
     })();
@@ -26,13 +26,21 @@
 <script>
   disqus_shortname = 'https-yliuhz-github-io-blogs';
   $(document).ready(function() {
-    jQuery("p").inlineDisqussions({
-        identifier: 'disqussion',
-        displayCount: true,
-        highlighted: false,
-        position: 'right',
-        background: 'white',
-        maxWidth: 9999
-        });
+    jQuery("p:not(.footnotes ol li p)").inlineDisqussions({
+      identifier: 'disqussion',
+      displayCount: true,
+      highlighted: false,
+      position: 'right',
+      background: 'white',
+      maxWidth: 4000,
+    });
+    jQuery("img").inlineDisqussions({
+      identifier: 'disqussion',
+      displayCount: true,
+      highlighted: false,
+      position: 'right',
+      background: 'white',
+      maxWidth: 4000,
+    });
   });
 </script>
