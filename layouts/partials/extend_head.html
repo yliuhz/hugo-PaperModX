@@ -23,8 +23,8 @@ MathJax = {
 
 
 
-
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
+{{- $jQueryJS := resources.Get "js/jquery-3.7.0.min.js" }}
+<script src="{{ $jQueryJS.RelPermalink }}" type="text/javascript"></script>
 {{- $inlineDiscussions := resources.Get "js/inlineDisqussions.js" }}
 <script src="{{ $inlineDiscussions.RelPermalink }}"></script>
 {{- $inlineDiscussionsCSS := resources.Get "css/extended/inlineDisqussions.css" }}
